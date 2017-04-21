@@ -1,0 +1,37 @@
+buildscript {
+    ext.kotlin_version = '1.1.1'
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.1.1'
+    id 'org.jetbrains.intellij' version '0.2.0'
+}
+
+group 'me.artspb.idea'
+version "0.1"
+
+apply plugin: "kotlin"
+
+repositories {
+    mavenCentral()
+}
+
+intellij {
+    version 'IU-171.4073.35'
+    plugins 'com.jetbrains.php:171.3780.104', 'CSS', 'java-i18n', 'properties'
+    updateSinceUntilBuild false
+
+    publish {
+        username "$System.env.JB_USERNAME"
+        password "$System.env.JB_PASSWORD"
+    }
+}
+
+dependencies {
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.rauschig:jarchivelib:0.7.1"
+}
+
+if (System.env.TRAVIS_TAG) {
+    assemble.dependsOn publishPlugin
+}

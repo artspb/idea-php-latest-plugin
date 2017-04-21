@@ -1,0 +1,31 @@
+<idea-plugin>
+  <id>me.artspb.idea.php.latest.plugin</id>
+  <name>PHP latest</name>
+  <version>0.1</version>
+  <vendor email="contact@artspb.me" url="https://artspb.me">Artem Khvastunov</vendor>
+
+  <description><![CDATA[
+      The plugin brings the latest stable versions of the PHP interpreter to PhpStorm or IntelliJ IDEA with the PHP plugin.
+    ]]>
+  </description>
+
+  <change-notes><![CDATA[
+      <h3>0.1</h3>
+      <ul>
+          <li>PHP7 for macOS.</li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="145.0"/>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.jetbrains.php</depends>
+
+  <project-components>
+    <component>
+      <implementation-class>me.artspb.idea.php.latest.plugin.PhpLocalInterpreterUpdater</implementation-class>
+    </component>
+  </project-components>
+
+</idea-plugin>

@@ -1,0 +1,18 @@
+language: java
+os: osx
+osx_image: xcode8.3
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+deploy:
+  provider: releases
+  api_key:
+    secure: Jtm+A0SVEL4nvhRfxXU0teNoytkjupt/eLA8AKKj3uX7EoKLC15A05kgm5MSsoinxtZESO83yewW726z7dCQE5Jlu8PokyH7E+3qNtzJm8uEvq253JubxiV4pYbdji8UAOZlAbWhRDg5ym4JgpYZkIEMdfbA8VLCwEeZ0oOY6ysKOVS3SuWcmwNAnQKAZJcOoF8ofTQ9q5AqjlOGMpmUWMi1DSQp8uwJFgEQY9+kdr4aSwxyxc7Y0zLdirO+H637HZ2PUfHvnQbi4aolM5atcC/L9rpLOX2TGZVKCRDPTUggwR9U6wYAdnVt99v5J4xJicLR0mkq+Aw07R+XJQtz9rw0F0VOLnxdl24wQ6AyeH7JdfNb+iHKXvHn45GMDc1P5izkHAs2XTfHA8bV5fTKcVL7J0mg7LTtjmkMDwKIrgfl/ZhRbytojfFPAZTyWkVR3dkvurX365Xhz5IHocYb6XJCX6+3rbtqtZ6Mb4qGD1q3FnanU0YAGsO9mOEokDEJmLJeS4TEBfMB5RQbTQmUrZ04JFYz/brE1kDDrysZChv2Cpd16ZFisoL0q8iskeBqpujLRHs6oaY+aeNTOzVhNz3Q8w4qOF5ii7uhCWCpiCd5US5enVaYGbUt98oW6PnFBaOWKTA5J6qchPiGmL1QUuyDi8RgBA1BQ8Atto78Rqw=
+  file: build/distributions/idea-php-latest-plugin-$TRAVIS_TAG.zip
+  skip_cleanup: true
+  on:
+    tags: true
