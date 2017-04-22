@@ -6,3 +6,4 @@
 [![Downloads last month](http://phpstorm.espend.de/badge/9662/last-month)](https://plugins.jetbrains.com/plugin/9662)
 
 The plugin brings the latest stable versions of the PHP interpreter to PhpStorm or IntelliJ IDEA with the PHP plugin.
+The Xdebug extension is bundled and enabled by default.
