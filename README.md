@@ -7,3 +7,5 @@
 
 The plugin brings the latest stable versions of the PHP interpreter to PhpStorm or IntelliJ IDEA with the PHP plugin.
 The Xdebug extension is bundled and enabled by default.
+
+<img src="doc/PHP_latest.png" width="800px" align="left" />
