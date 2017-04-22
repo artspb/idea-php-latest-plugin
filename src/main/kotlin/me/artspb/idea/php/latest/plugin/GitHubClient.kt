@@ -17,10 +17,17 @@ import java.io.InputStreamReader
 
 val LATEST_RELEASE_URL = "https://api.github.com/repos/artspb/php-latest-mac/releases/latest"
 
-fun requestRelease(): GitHubRelease = getRequestBuilder(LATEST_RELEASE_URL).connect { request ->
-    val response = parseResponse(request.inputStream)
-    return@connect fromJson(response, GitHubRelease::class.java)
-}
+fun requestRelease(): GitHubRelease = getRequestBuilder(LATEST_RELEASE_URL).
+        tuner { connection ->
+            val token = System.getenv("GITHUB_PAT")
+            if (token != null) {
+                connection.addRequestProperty("Authorization", "Basic $token")
+            }
+        }.
+        connect { request ->
+            val response = parseResponse(request.inputStream)
+            return@connect fromJson(response, GitHubRelease::class.java)
+        }
 
 private fun parseResponse(json: InputStream): JsonElement {
     InputStreamReader(json, CharsetToolkit.UTF8_CHARSET).use { reader ->
