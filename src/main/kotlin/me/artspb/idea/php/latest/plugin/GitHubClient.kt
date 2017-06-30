@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import com.google.gson.JsonElement
 import com.google.gson.JsonParser
 import com.intellij.openapi.progress.ProgressIndicator
+import com.intellij.openapi.util.SystemInfo
 import com.intellij.openapi.vfs.CharsetToolkit
 import com.intellij.util.io.HttpRequests
 import com.intellij.util.io.RequestBuilder
@@ -15,7 +16,8 @@ import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
 
-val LATEST_RELEASE_URL = "https://api.github.com/repos/artspb/php-latest-mac/releases/latest"
+val OS_NAME = if (SystemInfo.isMac) "mac" else if (SystemInfo.isLinux) "linux" else "unsupported"
+val LATEST_RELEASE_URL = "https://api.github.com/repos/artspb/php-latest-$OS_NAME/releases/latest"
 
 fun requestRelease(): GitHubRelease = getRequestBuilder(LATEST_RELEASE_URL).
         tuner { connection ->

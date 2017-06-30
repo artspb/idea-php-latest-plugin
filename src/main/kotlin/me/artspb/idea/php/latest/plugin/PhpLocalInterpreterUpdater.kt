@@ -26,7 +26,9 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
     }
 
     override fun projectOpened() {
-        if (!SystemInfo.isMac || project.isDefault) return
+        if (!SystemInfo.isMac && !SystemInfo.isLinux || project.isDefault) {
+            return
+        }
         StartupManager.getInstance(project).runWhenProjectIsInitialized {
             requestRelease { release ->
                 val serverVersion = release.tagName
@@ -97,7 +99,11 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
                 }
 
                 replaceTemplate(executable, phpDir.path)
-                replaceTemplate(File(phpDir, "ini/conf.d/ext-xdebug.ini"), phpDir.path)
+                if (SystemInfo.isMac) {
+                    replaceTemplate(File(phpDir, "ini/conf.d/ext-xdebug.ini"), phpDir.path)
+                } else if (SystemInfo.isLinux) {
+                    File(phpDir, "etc/php/7.1/cli/conf.d/").listFiles()?.forEach { replaceTemplate(it, phpDir.path) }
+                }
             }
 
             override fun onSuccess() = onSuccess()
