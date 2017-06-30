@@ -7,6 +7,7 @@ import com.google.gson.JsonParser
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.util.SystemInfo
 import com.intellij.openapi.vfs.CharsetToolkit
+import com.intellij.util.Base64
 import com.intellij.util.io.HttpRequests
 import com.intellij.util.io.RequestBuilder
 import org.jetbrains.io.mandatory.Mandatory
@@ -21,8 +22,9 @@ val LATEST_RELEASE_URL = "https://api.github.com/repos/artspb/php-latest-$OS_NAM
 
 fun requestRelease(): GitHubRelease = getRequestBuilder(LATEST_RELEASE_URL).
         tuner { connection ->
-            val token = System.getenv("GITHUB_PAT")
-            if (token != null) {
+            val pair = System.getenv("GITHUB_PAT")
+            if (pair != null) {
+                val token = Base64.encode(pair.toByteArray())
                 connection.addRequestProperty("Authorization", "Basic $token")
             }
         }.
