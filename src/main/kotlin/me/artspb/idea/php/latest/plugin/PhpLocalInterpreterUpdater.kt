@@ -6,6 +6,7 @@ import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
 import com.intellij.openapi.application.PathManager
 import com.intellij.openapi.components.ProjectComponent
+import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.Project
@@ -18,10 +19,12 @@ import com.jetbrains.php.config.interpreters.PhpInterpretersManagerImpl
 import com.jetbrains.php.ui.PhpUiUtil
 import org.rauschig.jarchivelib.ArchiverFactory
 import java.io.File
+import java.net.UnknownHostException
 
 class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
 
     companion object {
+        val LOG = Logger.getInstance("#me.artspb.idea.php.latest.plugin.PhpLocalInterpreterUpdater")
         val NAME = "PHP latest"
     }
 
@@ -64,6 +67,14 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
             }
 
             override fun onSuccess() = onSuccess(release ?: throw IllegalStateException("Release must be present"))
+
+            override fun onThrowable(error: Throwable) {
+                if (error is UnknownHostException) {
+                    LOG.info(error.message)
+                } else {
+                    super.onThrowable(error)
+                }
+            }
         }.queue()
     }
 
