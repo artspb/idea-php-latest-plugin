@@ -8,7 +8,7 @@ plugins {
 }
 
 group 'me.artspb.idea'
-version "0.2"
+version "0.3"
 
 apply plugin: "kotlin"
 

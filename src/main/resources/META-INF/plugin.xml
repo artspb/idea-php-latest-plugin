@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.artspb.idea.php.latest.plugin</id>
   <name>PHP latest</name>
-  <version>0.2</version>
+  <version>0.3</version>
   <vendor email="contact@artspb.me" url="https://artspb.me">Artem Khvastunov</vendor>
 
   <description><![CDATA[
@@ -11,6 +11,10 @@
   </description>
 
   <change-notes><![CDATA[
+      <h3>0.3</h3>
+      <ul>
+          <li>Ability to download an interpreter during indexing.</li>
+      </ul>
       <h3>0.2</h3>
       <ul>
           <li>PHP 7.1 for both macOS and Linux.</li>
