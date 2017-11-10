@@ -1,14 +1,15 @@
 package me.artspb.idea.php.latest.plugin
 
 import com.intellij.notification.Notification
-import com.intellij.notification.NotificationListener
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
+import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.application.PathManager
 import com.intellij.openapi.components.ProjectComponent
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
+import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupManager
 import com.intellij.openapi.util.SystemInfo
@@ -146,18 +147,20 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
         return interpreter
     }
 
-    private fun fireNotification(version: String) = Notifications.Bus.notify(
-            Notification(
-                    NAME, NAME,
-                    """The latest PHP interpreter $version has been downloaded. Would you like to <a href="configure">configure</a> it?""",
-                    NotificationType.INFORMATION,
-                    NotificationListener { notification, _ ->
-                        PhpUiUtil.editConfigurable(project, PhpProjectConfigurable(project))
-                        notification.expire()
-                    }
-            ),
-            project
-    )
+    private fun fireNotification(version: String) {
+        val notification = Notification(
+                NAME, NAME,
+                """The latest PHP interpreter $version has been downloaded. Would you like to configure it?""",
+                NotificationType.INFORMATION
+        )
+        notification.addAction(object : DumbAwareAction("Configure") {
+            override fun actionPerformed(e: AnActionEvent) {
+                PhpUiUtil.editConfigurable(project, PhpProjectConfigurable(project))
+                notification.expire()
+            }
+        })
+        Notifications.Bus.notify(notification, project)
+    }
 
     override fun getComponentName() = "idea.php.latest.plugin.PhpLocalInterpreterUpdater"
 
