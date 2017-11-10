@@ -51,8 +51,10 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
                         throw IllegalStateException("Unable to create directories: ${phpDir.path}")
                     }
                     downloadInterpreter(phpDir, executable, release) {
-                        addInterpreterConditionally(executable.path)
-                        fireNotification(serverVersion)
+                        if (!project.isDisposed) {
+                            addInterpreterConditionally(executable.path)
+                            fireNotification(serverVersion)
+                        }
                     }
                 }
             }
