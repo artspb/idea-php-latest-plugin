@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="idea-php-latest-plugin:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="me.artspb.idea" external.system.module.type="sourceSet" external.system.module.version="0.3" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="idea-php-latest-plugin:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="me.artspb.idea" external.system.module.type="sourceSet" external.system.module.version="0.4" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="2" platform="JVM 1.6" useProjectSettings="false">
@@ -44,24 +44,24 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.9" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.51" level="project" />
-    <orderEntry type="module-library" scope="PROVIDED">
-      <library name="Gradle: org.jetbrains.plugins:com.jetbrains.php:171.4424.11">
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/commons-compress-1.10.jar!/" />
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/php-openapi.jar!/" />
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/php.jar!/" />
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/resources_en.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library" scope="PROVIDED">
       <library name="Gradle: org.jetbrains.plugins:java-i18n:171.4694.23">
         <CLASSES>
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/java-i18n/lib/java-i18n.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/java-i18n/lib/resources_en.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/171.4694.23/6aec6a19c69624f4caba5b4ca8a030badb145c83/ideaIC-171.4694.23-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library name="Gradle: org.jetbrains.plugins:CSS:171.4694.23">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css-openapi.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/resources_en.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -79,6 +79,20 @@
         <SOURCES>
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/171.4694.23/6aec6a19c69624f4caba5b4ca8a030badb145c83/ideaIC-171.4694.23-sources.jar!/" />
         </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.51" level="project" />
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library name="Gradle: org.jetbrains.plugins:com.jetbrains.php:171.4424.11">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/commons-compress-1.10.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/php-openapi.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/php.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/plugins.jetbrains.com/com.jetbrains.php-master-171.4424.11/php/lib/resources_en.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library" scope="PROVIDED">
@@ -211,20 +225,6 @@
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/lib/xstream-1.4.8.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/lib/xz-1.5.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/lib/yjp-controller-api-redist.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/171.4694.23/6aec6a19c69624f4caba5b4ca8a030badb145c83/ideaIC-171.4694.23-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
-    <orderEntry type="module-library" scope="PROVIDED">
-      <library name="Gradle: org.jetbrains.plugins:CSS:171.4694.23">
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css-openapi.jar!/" />
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css.jar!/" />
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/resources_en.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
