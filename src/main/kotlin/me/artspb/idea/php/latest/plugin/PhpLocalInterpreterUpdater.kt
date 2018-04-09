@@ -115,10 +115,13 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
                 }
 
                 replaceTemplate(executable, phpDir.path)
-                if (SystemInfo.isMac) {
-                    replaceTemplate(File(phpDir, "ini/conf.d/ext-xdebug.ini"), phpDir.path)
-                } else if (SystemInfo.isLinux) {
-                    File(phpDir, "etc/php/7.1/cli/conf.d/").listFiles()?.forEach { replaceTemplate(it, phpDir.path) }
+                val confDir = when {
+                    SystemInfo.isMac -> "ini/conf.d/"
+                    SystemInfo.isLinux -> "usr/local/etc/php/conf.d/"
+                    else -> null
+                }
+                if (confDir != null) {
+                    File(phpDir, confDir).listFiles()?.forEach { replaceTemplate(it, phpDir.path) }
                 }
             }
 
