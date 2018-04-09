@@ -1,3 +1,5 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 buildscript {
     ext.kotlin_version = '1.1.51'
 }
@@ -32,6 +34,6 @@ dependencies {
     compile "org.rauschig:jarchivelib:0.7.1"
 }
 
-if (System.env.TRAVIS_TAG) {
+if (System.env.TRAVIS_TAG && Os.isFamily(Os.FAMILY_UNIX)) {
     assemble.dependsOn publishPlugin
 }
