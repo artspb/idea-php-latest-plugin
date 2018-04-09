@@ -34,6 +34,15 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="idea-php-latest-plugin_main" />
     <orderEntry type="library" name="Gradle: org.rauschig:jarchivelib:0.7.1" level="project" />
+    <orderEntry type="module-library" scope="RUNTIME">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/tools/jbsdk8u152b1161_x64_dcevm/Contents/Home/lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="module-library">
       <library name="Gradle: com.jetbrains:ideaIU:171.4694.23">
         <CLASSES>
@@ -169,15 +178,6 @@
         <SOURCES>
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/171.4694.23/6aec6a19c69624f4caba5b4ca8a030badb145c83/ideaIC-171.4694.23-sources.jar!/" />
         </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="RUNTIME">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/tools/jbsdk8u152b1161_x64_dcevm/Contents/Home/lib/tools.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.9" level="project" />
