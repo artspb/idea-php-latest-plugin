@@ -27,7 +27,7 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
 
     companion object {
         val LOG = Logger.getInstance("#me.artspb.idea.php.latest.plugin.PhpLocalInterpreterUpdater")
-        val NAME = "PHP latest"
+        const val NAME = "PHP latest"
     }
 
     override fun projectOpened() {
