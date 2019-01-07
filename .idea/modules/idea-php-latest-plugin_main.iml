@@ -45,6 +45,19 @@
     </orderEntry>
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.9" level="project" />
     <orderEntry type="module-library" scope="PROVIDED">
+      <library name="Gradle: org.jetbrains.plugins:CSS:171.4694.23">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css-openapi.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/resources_en.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/171.4694.23/6aec6a19c69624f4caba5b4ca8a030badb145c83/ideaIC-171.4694.23-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="PROVIDED">
       <library name="Gradle: org.jetbrains.plugins:properties:171.4694.23">
         <CLASSES>
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/properties/lib/properties.jar!/" />
@@ -193,7 +206,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.51" level="project" />
     <orderEntry type="module-library" scope="PROVIDED">
       <library name="Gradle: org.jetbrains.plugins:com.jetbrains.php:171.4424.11">
         <CLASSES>
@@ -218,19 +231,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library" scope="PROVIDED">
-      <library name="Gradle: org.jetbrains.plugins:CSS:171.4694.23">
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css-openapi.jar!/" />
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/css.jar!/" />
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIU/171.4694.23/abd1a06bf973d6360226e9a703137f4a0aa7e7b2/ideaIU-171.4694.23/plugins/CSS/lib/resources_en.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/171.4694.23/6aec6a19c69624f4caba5b4ca8a030badb145c83/ideaIC-171.4694.23-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.51" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
   </component>
 </module>
