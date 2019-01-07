@@ -21,6 +21,7 @@ import com.jetbrains.php.config.interpreters.PhpInterpretersManagerImpl
 import com.jetbrains.php.ui.PhpUiUtil
 import org.rauschig.jarchivelib.ArchiverFactory
 import java.io.File
+import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
 class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
@@ -74,7 +75,7 @@ class PhpLocalInterpreterUpdater(val project: Project) : ProjectComponent {
             override fun onSuccess() = onSuccess(release ?: throw IllegalStateException("Release must be present"))
 
             override fun onThrowable(error: Throwable) {
-                if (error is UnknownHostException) {
+                if (error is UnknownHostException || error is SocketTimeoutException) {
                     LOG.info(error.message)
                 } else {
                     super.onThrowable(error)
